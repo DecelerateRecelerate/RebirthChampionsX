@@ -5,7 +5,7 @@ local Window = Library.CreateLib("Rebirth Champions X", "Ocean")
 -- Tabs
 local automationsection = Window:NewTab("Automation") local automation = automationsection:NewSection("Automation")
 local autohatchsection = Window:NewTab("AutoHatch") local autohatch = autohatchsection:NewSection("Autohatch")
-local miscsection = Window:NewTab("Misc") local misc = miscsection:NewSection("Autohatch")
+local miscsection = Window:NewTab("Misc") local misc = miscsection:NewSection("Misc")
 -- Main
 automation:NewToggle("AutoClicker", "Autoclicks for you", function(state)
     if state then
