@@ -3,8 +3,8 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHept
 
 local Window = Library.CreateLib("Rebirth Champions X", "Ocean")
 -- Tabs
-local automationsection = Window:NewTab("Auto") local automation = automationsection:NewSection("Automation")
-local autohatchsection = Window:NewTab("Auto") local autohatch = autohatchsection:NewSection("Autohatch")
+local automationsection = Window:NewTab("Automation") local automation = automationsection:NewSection("Automation")
+local autohatchsection = Window:NewTab("AutoHatch") local autohatch = autohatchsection:NewSection("Autohatch")
 -- Main
 automation:NewToggle("AutoClicker", "Autoclicks for you", function(state)
     if state then
