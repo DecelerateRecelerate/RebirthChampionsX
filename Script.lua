@@ -4,7 +4,7 @@ local Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/xHept
 local Window = Library.CreateLib("Rebirth Champions X", "Ocean")
 -- Tabs
 local automationsection = Window:NewTab("Automation") local automation = automationsection:NewSection("Automation")
-local autohatchsection = Window:NewTab("AutoHatch") local autohatch = autohatchsection:NewSection("Autohatch")
+local autohatchsection = Window:NewTab("AutoHatch") local autohatch = autohatchsection:NewSection("Auto hatch")
 local miscsection = Window:NewTab("Misc") local misc = miscsection:NewSection("Misc")
 -- Main
 automation:NewToggle("AutoClicker", "Autoclicks for you", function(state)
@@ -18,6 +18,7 @@ automation:NewToggle("AutoClicker", "Autoclicks for you", function(state)
         _G.autoClicker = false;
     end
 end)
+-- Basic egg 3x
 autohatch:NewToggle("Basic eggs (3x)", "Hatches eggs for you", function(state)
     if state then
         _G.autohatchbasic3x = true;
@@ -34,6 +35,25 @@ game:GetService("ReplicatedStorage").Functions.Unbox:InvokeServer(unpack(autohat
         _G.autohatchbasic3x = false;
     end
 end)
+-- Mythic egg 3x
+autohatch:NewToggle("Mythic Egg (3x)", "Hatches eggs for you", function(state)
+    if state then
+        _G.autohatchmythic3x = true;
+                while _G.autohatchmythic3x == true do
+local autohatchmythicegg3x = {
+    [1] = "Mythic",
+    [2] = "Triple"
+}
+game:GetService("ReplicatedStorage").Functions.Unbox:InvokeServer(unpack(autohatchmythicegg3x))
+            task.wait()
+        end
+    else
+        _G.autohatchmythicegg3x = false;
+    end
+end)
+game:GetService("ReplicatedStorage").Functions.Unbox:InvokeServer(unpack(autohatchmythicegg3x))
+
+-- redeem all codes
 misc:NewButton("Redeem ALL codes", "Redeems all codes in Rebirth Champions X.", function()
         local redeemcodes = {
     [1] = "75m",
