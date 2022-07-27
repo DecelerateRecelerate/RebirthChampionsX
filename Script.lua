@@ -91,6 +91,23 @@ misc:NewButton("Redeem ALL codes", "Redeems all codes in Rebirth Champions X.", 
     [33] = "thanks500likes",
     [34] = "RELEASE"
 }
+        -- Auto-craft
+automation:NewToggle("Auto-craft all", "Automatically crafts all pets for you", function(state)
+    if state then
+         _G.autocraft = true;
+            while _G.autocraft == true do
+                   local automation_autocraft = {
+                        [1] = "CraftAll",
+                        [2] = {}
+}
+game:GetService("ReplicatedStorage").Functions.Request:InvokeServer(unpack(automation_autocraft))
+
+         end
+    else
+        _G.autocraft = false;
+    end
+end)
+-- Misc
 game:GetService("ReplicatedStorage").Events.Codes:FireServer(unpack(redeemcodes))
     print("Redeemed all codes!")
 end)
