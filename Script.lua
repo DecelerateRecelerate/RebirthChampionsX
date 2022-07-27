@@ -22,11 +22,13 @@ autohatch:NewToggle("Basic eggs (3x)", "Hatches eggs for you", function(state)
     if state then
         _G.autohatchbasic3x = true;
                 while _G.autohatchbasic3x == true do
-            local autohatchbasic3x = {
+local autohatchbasicegg3x = {
     [1] = "Basic",
     [2] = "Triple"
 }
-for i,v in next, autohatchbasic3x do game:GetService("ReplicatedStorage").Events.Codes:FireServer(v) end
+
+game:GetService("ReplicatedStorage").Functions.Unbox:InvokeServer(unpack(autohatchbasicegg3x))
+
             task.wait()
         end
     else
