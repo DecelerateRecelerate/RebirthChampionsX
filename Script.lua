@@ -48,7 +48,7 @@ game:GetService("ReplicatedStorage").Functions.Unbox:InvokeServer(unpack(autohat
             task.wait()
         end
     else
-        _G.autohatchmythicegg3x = false;
+        _G.autohatchmythic3x = false;
     end
 end)
 game:GetService("ReplicatedStorage").Functions.Unbox:InvokeServer(unpack(autohatchmythicegg3x))
