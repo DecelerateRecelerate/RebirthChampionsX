@@ -33,7 +33,7 @@ game:GetService("ReplicatedStorage").Functions.Unbox:InvokeServer(unpack(args))
         _G.autohatchbasic3x = false;
     end
 end)
-misc:NewButton("ButtonText", "Redeems all codes in Rebirth Champions X.", function()
+misc:NewButton("Redeem ALL codes", "Redeems all codes in Rebirth Champions X.", function()
         local args = {
     [1] = "75m",
     [2] = "fantasy",
