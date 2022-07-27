@@ -4,7 +4,7 @@ local Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/xHept
 local Window = Library.CreateLib("Rebirth Champions X", "Ocean")
 -- Tabs
 local automationsection = Window:NewTab("Automation") local automation = automationsection:NewSection("Automation")
-local autohatchsection = Window:NewTab("AutoHatch") local autohatch = autohatchsection:NewSection("Auto hatch")
+local autohatchsection = Window:NewTab("AutoHatch") local autohatch3x = autohatchsection:NewSection("Auto hatch (3x)") local autohatch3x = autohatchsection:NewSection("Auto hatch (1x)")
 local miscsection = Window:NewTab("Misc") local misc = miscsection:NewSection("Misc")
 -- Main
 automation:NewToggle("AutoClicker", "Autoclicks for you", function(state)
@@ -19,7 +19,7 @@ automation:NewToggle("AutoClicker", "Autoclicks for you", function(state)
     end
 end)
 -- Basic egg 3x
-autohatch:NewToggle("Basic eggs (3x)", "Hatches eggs for you", function(state)
+autohatch3x:NewToggle("Basic eggs (3x)", "Hatches eggs for you", function(state)
     if state then
         _G.autohatchbasic3x = true;
                 while _G.autohatchbasic3x == true do
@@ -36,7 +36,7 @@ game:GetService("ReplicatedStorage").Functions.Unbox:InvokeServer(unpack(autohat
     end
 end)
 -- Mythic egg 3x
-autohatch:NewToggle("Mythic Egg (3x)", "Hatches eggs for you", function(state)
+autohatch3x:NewToggle("Mythic Egg (3x)", "Hatches eggs for you", function(state)
     if state then
         _G.autohatchmythic3x = true;
                 while _G.autohatchmythic3x == true do
