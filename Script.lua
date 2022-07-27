@@ -30,6 +30,6 @@ game:GetService("ReplicatedStorage").Functions.Unbox:InvokeServer(unpack(args))
 			wait()
         end
     else
-		_G.autoClicker = false;
+		_G.autohatchbasic3x = false;
     end
 end)
