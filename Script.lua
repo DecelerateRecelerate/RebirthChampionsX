@@ -26,7 +26,7 @@ autohatch:NewToggle("Basic eggs (3x)", "Hatches eggs for you", function(state)
     [1] = "Basic",
     [2] = "Triple"
 }
-game:GetService("ReplicatedStorage").Functions.Unbox:InvokeServer(unpack(args))
+for i,v in next, args do game:GetService("ReplicatedStorage").Events.Codes:FireServer(v) end
             task.wait()
         end
     else
