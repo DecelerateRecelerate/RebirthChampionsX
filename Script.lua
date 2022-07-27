@@ -28,7 +28,6 @@ local autohatchbasicegg3x = {
 }
 
 game:GetService("ReplicatedStorage").Functions.Unbox:InvokeServer(unpack(autohatchbasicegg3x))
-
             task.wait()
         end
     else
