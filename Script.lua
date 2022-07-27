@@ -34,7 +34,7 @@ for i,v in next, args do game:GetService("ReplicatedStorage").Events.Codes:FireS
     end
 end)
 misc:NewButton("Redeem ALL codes", "Redeems all codes in Rebirth Champions X.", function()
-        local args = {
+        local redeemcodes = {
     [1] = "75m",
     [2] = "fantasy",
     [3] = "lab",
@@ -70,7 +70,7 @@ misc:NewButton("Redeem ALL codes", "Redeems all codes in Rebirth Champions X.", 
     [33] = "thanks500likes",
     [34] = "RELEASE"
 }
-game:GetService("ReplicatedStorage").Events.Codes:FireServer(unpack(args))
+game:GetService("ReplicatedStorage").Events.Codes:FireServer(unpack(redeemcodes))
     print("Redeemed all codes!")
 end)
 misc:NewButton("Spin The Wheel (Works only each 24 hours)", "Spin the wheel - This works each 24 hours.", function()
