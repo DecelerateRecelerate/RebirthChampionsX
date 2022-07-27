@@ -12,7 +12,7 @@ automation:NewToggle("AutoClicker", "Autoclicks for you", function(state)
         _G.autoClicker = true;
                 while _G.autoClicker == true do
             game:GetService("ReplicatedStorage").Events.Click3:FireServer()
-            wait()
+            task.wait()
         end
     else
         _G.autoClicker = false;
@@ -27,7 +27,7 @@ autohatch:NewToggle("Basic eggs (3x)", "Hatches eggs for you", function(state)
     [2] = "Triple"
 }
 game:GetService("ReplicatedStorage").Functions.Unbox:InvokeServer(unpack(args))
-            wait()
+            task.wait()
         end
     else
         _G.autohatchbasic3x = false;
