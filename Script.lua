@@ -73,3 +73,6 @@ misc:NewButton("Redeem ALL codes", "Redeems all codes in Rebirth Champions X.", 
 game:GetService("ReplicatedStorage").Events.Codes:FireServer(unpack(args))
     print("Redeemed all codes!")
 end)
+misc:NewButton("Spin The Wheel (Works only each 24 hours)", "Spin the wheel - This works each 24 hours.", function()
+game:GetService("ReplicatedStorage").Functions.Spin:InvokeServer()
+end)
